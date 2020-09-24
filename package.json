@@ -1,0 +1,22 @@
+{
+  "name": "test-pkg",
+  "bin": "index.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "bundle": "pkg --output hello-cli-macos . && chmod +x hello-cli-macos"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.9"
+  },
+  "pkg": {
+    "targets": [
+      "node12.18.1-macos-x64"
+    ],
+    "options": [
+      "max_old_space_size=4096"
+    ],
+    "assets": "idl-descriptors.json"
+  }
+}
